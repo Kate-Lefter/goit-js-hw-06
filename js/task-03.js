@@ -30,7 +30,7 @@ const images = [
   //     const listImagesEl = document.createElement('img');
   //     listImagesEl.setAttribute('srs', image.url);
   //     listImagesEl.setAttribute('alt', image.alt);
-  //     listImagesEl.classList.add('item');
+  //     // listImagesEl.classList.add('item');
   //     listImagesEl.classList.add('width', 'height');
   //     navListImagesEl.append(listImagesEl);
   //     return navListImagesEl;

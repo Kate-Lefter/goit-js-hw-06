@@ -6,6 +6,17 @@
 const fontSizeControlEl = document.querySelector('#font-size-control');
 const changeSizeTextEl = document.querySelector('#text');
 fontSizeControlEl.addEventListener('input', handleInputRange);
+
+fontSizeControlEl.value = Number.parseInt(
+  window.getComputedStyle(changeSizeTextEl).fontSize,
+);
+
 function handleInputRange (event) {
     changeSizeTextEl.style.fontSize = event.currentTarget.value + "px";
 };
+
+
+
+
+
+
