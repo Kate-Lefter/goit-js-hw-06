@@ -12,12 +12,34 @@ const images = [
       alt: 'Group of Horses Running',
     },
   ];
-
+// ----------внесла корректировки-----------------------
   const navImagesEl = document.querySelector('.gallery');
+  navImagesEl.style.listStyle = "none";
 
-  images.forEach(el => {
-    navImagesEl.insertAdjacentHTML(
-      'afterbegin',
-      `<li><img src = "${el.url}" alt = "${el.alt}"  width = "364" height = "204" /></li>`,
-    );
-  });
+  const navListImagesEl = images.map(
+    ({ url, alt }) =>
+      `<li><img src = '${url}' alt = '${alt}' width = '364' height = '204'></li>`
+  )
+  .join("");
+  navImagesEl.insertAdjacentHTML("afterbegin", navListImagesEl);
+
+
+
+  //   const imagesEl = images.map(image => {
+  //     const navListImagesEl = document.createElement('li');
+  //     const listImagesEl = document.createElement('img');
+  //     listImagesEl.setAttribute('srs', image.url);
+  //     listImagesEl.setAttribute('alt', image.alt);
+  //     listImagesEl.classList.add('item');
+  //     listImagesEl.classList.add('width', 'height');
+  //     navListImagesEl.append(listImagesEl);
+  //     return navListImagesEl;
+  //   });
+  
+
+  // navImagesEl.insertAdjacentHTML('afterbegin', imagesEl);
+  // console.log(navImagesEl);
+
+
+  // ---------этот вариант не получается (((
+  
